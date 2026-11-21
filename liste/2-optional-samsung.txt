@@ -1,0 +1,25 @@
+# Aplicații Samsung opționale - scoate-le doar dacă nu le folosești.
+# Format: pachet # descriere
+com.samsung.android.bixbyvision.framework  # Bixby Vision (scanare cu camera, traducere vizuală)
+com.samsung.android.visionintelligence     # Bixby Vision - aplicația
+com.samsung.android.app.routines           # Moduri și rutine
+com.samsung.android.game.gamehome          # Game Launcher
+com.samsung.android.game.gametools         # Game Booster (overlay în jocuri)
+com.samsung.android.stickercenter          # Centru de stickere
+com.samsung.android.service.peoplestripe   # Panou Edge - persoane
+com.samsung.android.svoiceime              # Dictare vocală Samsung
+com.samsung.android.forest                 # Bunăstare digitală (Digital Wellbeing)
+com.samsung.android.da.daagent             # Dual Messenger
+com.sec.android.easyMover                  # Smart Switch (transfer de pe alt telefon)
+com.samsung.android.smartswitchassistant   # Smart Switch - asistent
+com.samsung.android.scloud                 # Samsung Cloud (backup Samsung)
+com.samsung.android.oneconnect             # SmartThings (necesar pt. căști/ceas/TV Samsung)
+com.samsung.android.spay                   # Samsung Wallet (plăți contactless Samsung)
+com.samsung.android.samsungpass            # Samsung Pass (parole)
+com.sec.android.app.sbrowser               # Samsung Internet
+com.samsung.android.email.provider         # Samsung Email
+com.samsung.android.calendar               # Calendar Samsung
+com.samsung.android.app.reminder           # Memento (Reminder)
+com.sec.android.app.voicenote              # Reportofon
+com.sec.android.app.shealth                # Samsung Health
+com.sec.android.app.samsungapps            # Galaxy Store (fără el nu mai primești update-uri la aplicațiile Samsung)

@@ -1,0 +1,36 @@
+# Sigur de eliminat pe Galaxy S24 Ultra - nu afectează funcțiile de bază.
+# Format: pachet # descriere
+com.samsung.android.bixby.agent            # Bixby Voice
+com.samsung.android.bixby.wakeup           # Bixby - cuvânt de activare
+com.samsung.systemui.bixby2                # Bixby - integrare în bara de sistem
+com.samsung.android.app.spage              # Samsung Free / Bixby Home
+com.samsung.android.app.tips               # Sfaturi (Tips)
+com.samsung.android.ardrawing              # AR Doodle
+com.samsung.android.aremoji                # AR Emoji
+com.samsung.android.aremojieditor          # Editor AR Emoji
+com.samsung.android.arzone                 # AR Zone
+com.sec.android.mimage.avatarstickers      # Stickere avatar
+com.samsung.android.app.camera.sticker.facearavatar.preload  # Stickere AR în cameră
+com.samsung.android.livestickers           # Stickere animate
+com.samsung.android.kidsinstaller          # Instalator Samsung Kids
+com.sec.android.app.kidshome               # Samsung Kids
+com.samsung.android.app.parentalcare       # Control parental Samsung
+com.samsung.android.voc                    # Samsung Members
+com.samsung.sree                           # Samsung Global Goals
+com.samsung.android.tvplus                 # Samsung TV Plus
+com.samsung.android.mateagent              # Galaxy Friends
+com.samsung.android.privateshare           # Private Share
+com.samsung.android.app.watchmanagerstub   # Stub Galaxy Wearable (se reinstalează la nevoie)
+com.samsung.android.rubin.app              # Customization Service (profilare/reclame)
+com.samsung.android.dqagent                # Device Quality Agent (telemetrie)
+com.sec.android.diagmonagent               # Diagnostic monitoring (telemetrie)
+com.sec.android.app.chromecustomizations   # Personalizări Chrome de la operator
+com.facebook.katana                        # Facebook (aplicația)
+com.facebook.system                        # Facebook App Installer
+com.facebook.appmanager                    # Facebook App Manager
+com.facebook.services                      # Facebook Services
+com.linkedin.android                       # LinkedIn
+com.netflix.mediaclient                    # Netflix (preinstalat)
+com.netflix.partner.activation             # Netflix - activare partener
+com.google.android.apps.subscriptions.red  # Google One
+com.google.android.videos                  # Google TV

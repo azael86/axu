@@ -1,0 +1,14 @@
+# Aplicații Google / Microsoft opționale.
+# Format: pachet # descriere
+com.google.android.apps.tachyon            # Google Meet
+com.google.android.youtube                 # YouTube
+com.google.android.apps.youtube.music      # YouTube Music
+com.google.android.apps.docs               # Google Drive
+com.google.android.apps.photos             # Google Foto
+com.google.android.gm                      # Gmail
+com.google.android.apps.maps               # Google Maps
+com.microsoft.skydrive                     # OneDrive
+com.microsoft.office.officehubrow          # Microsoft 365 (Office)
+com.microsoft.office.outlook               # Outlook
+com.microsoft.appmanager                   # Link to Windows
+com.spotify.music                          # Spotify (preinstalat)
