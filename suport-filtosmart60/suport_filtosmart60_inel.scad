@@ -26,7 +26,9 @@ inaltime_inel = 40;  // înălțimea inelului
 buza_jos     = 0;    // buză interioară jos, opțională (filtrul atârnă de umărul capului)
 grosime_stalp = 6;   // grosimea stâlpilor și a cârligelor
 latime_stalp = 25;   // lățimea stâlpilor
-decupaj_cablu = true; // crestătură la un capăt (cablu / furtun)
+crestaturi = true;   // crestături la ambele capete pentru proeminențele filtrului
+latime_crestatura = 15;   // lățimea crestăturii (proeminența filtrului ≈ 13 mm)
+adancime_crestatura = 22; // cât coboară crestătura de la marginea de sus
 
 $fn = 96;
 
@@ -64,13 +66,16 @@ module inel() {
                 translate([0, 0, -1]) linear_extrude(perete_inel + 2) offset(-buza_jos) oval2d(int_L, int_l, r_int);
             }
         }
-        // crestătură pentru cablu la capătul din stânga
-        if (decupaj_cablu)
-            translate([-perete_inel - 1, int_l/2, inaltime_inel - 14])
-                rotate([0, 90, 0]) hull() {
-                    cylinder(d = 9, h = perete_inel + 2);
-                    translate([-20, 0, 0]) cylinder(d = 9, h = perete_inel + 2);
-                }
+        // crestături la ambele capete (pe axa inelului) în care intră
+        // proeminențele de pe lateralele filtrului; fundul este rotunjit
+        if (crestaturi)
+            for (x = [-perete_inel - 1, int_L - 1])
+                translate([x, int_l/2, inaltime_inel - adancime_crestatura + latime_crestatura/2])
+                    rotate([0, 90, 0]) hull() {
+                        cylinder(d = latime_crestatura, h = perete_inel + 2);
+                        translate([-adancime_crestatura, 0, 0])
+                            cylinder(d = latime_crestatura, h = perete_inel + 2);
+                    }
     }
     // perete spate drept, îngroșat, lipit de geam (umple între stâlpi și inel)
     translate([r_int, 0, z_jos]) cube([int_L - 2*r_int, y0, inaltime_inel]);

@@ -6,10 +6,11 @@
 
 Montaj ca la originalul OASE: inelul oval se prinde sub capul (umărul) filtrului, iar filtrul atârnă în el.
 Capul filtrului rămâne cam la nivelul marginii geamului. Doi stâlpi scurți cu cârlige în J se agață pe geam.
+Pe ambele capete are câte o crestătură deschisă sus, în care intră proeminențele de pe lateralele filtrului.
 **Măsoară corpul filtrului chiar sub cap** și pune valorile în `filtru_L`, `filtru_l`, `raza_capete`.
 
 - `suport_filtosmart60_inel.stl`: gata de printat (geam de 6 mm)
-- `suport_filtosmart60_inel.scad`: model parametric (`geam_grosime`, `inel_sub_margine`, `buza_carlig`, `buza_jos`, `joc`, `raza_capete`)
+- `suport_filtosmart60_inel.scad`: model parametric (`geam_grosime`, `inel_sub_margine`, `buza_carlig`, `buza_jos`, `joc`, `raza_capete`, `latime_crestatura`, `adancime_crestatura`)
 - Printare: în picioare, cu inelul pe pat. Suport **doar sub cârlige** (pune-l manual sau folosește suport în copac). PETG.
 - Gabarit aproximativ: 159 × 112 × 81 mm
 
