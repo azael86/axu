@@ -1,13 +1,15 @@
 // Suport agățat tip inel (ca suportul original OASE) pentru FiltoSmart 60
-// Inel oval care cuprinde partea de jos a filtrului + 2 stâlpi cu cârlige în J
+// Inel oval care se prinde sub capul (umărul) filtrului + 2 stâlpi cu cârlige în J
 // care se agață peste geamul acvariului. Toate valorile în mm.
 //
 // Printare: în picioare (inelul pe pat). Suport DOAR sub cârlige
 // (buza care intră în acvariu); restul se printează fără suport. PETG.
 
 /* [Filtru] */
-filtru_L = 150;      // lungimea filtrului (paralel cu geamul)
-filtru_l = 90;       // lățimea filtrului (perpendicular pe geam)
+// Măsoară CORPUL filtrului chiar sub capul lui (acolo stă inelul).
+// Inelul trebuie să fie mai mic decât capul, ca filtrul să atârne în el.
+filtru_L = 150;      // lungimea corpului (paralel cu geamul)
+filtru_l = 90;       // lățimea corpului (perpendicular pe geam)
 filtru_H = 164;      // înălțimea filtrului
 joc      = 1.5;      // joc pe fiecare parte
 raza_capete = 45;    // raza capetelor rotunjite (max = (filtru_l+2*joc)/2)
@@ -15,13 +17,13 @@ raza_capete = 45;    // raza capetelor rotunjite (max = (filtru_l+2*joc)/2)
 /* [Acvariu] */
 geam_grosime = 6;    // grosimea geamului (MĂSOARĂ-L!)
 geam_joc     = 1;    // joc suplimentar pentru geam / silicon
-sub_margine  = 20;   // cât de jos stă capacul filtrului sub marginea geamului
-buza_carlig  = 40;   // cât coboară cârligul în interiorul acvariului
+inel_sub_margine = 35; // cât de jos e marginea de sus a inelului sub muchia geamului
+buza_carlig  = 30;   // cât coboară cârligul în interiorul acvariului
 
 /* [Construcție] */
 perete_inel  = 3;    // grosimea inelului
 inaltime_inel = 40;  // înălțimea inelului
-buza_jos     = 4;    // buză interioară jos pe care se sprijină filtrul (0 = fără)
+buza_jos     = 0;    // buză interioară jos, opțională (filtrul atârnă de umărul capului)
 grosime_stalp = 6;   // grosimea stâlpilor și a cârligelor
 latime_stalp = 25;   // lățimea stâlpilor
 decupaj_cablu = true; // crestătură la un capăt (cablu / furtun)
@@ -33,7 +35,7 @@ int_L = filtru_L + 2*joc;
 int_l = filtru_l + 2*joc;
 r_int = min(raza_capete, int_l/2);
 g = geam_grosime + geam_joc;
-z_jos = -(filtru_H + sub_margine) - (buza_jos > 0 ? perete_inel : 0);
+z_jos = -inel_sub_margine - inaltime_inel;
 y0 = grosime_stalp;            // de aici începe interiorul inelului (spre exterior)
 
 // Coordonate: X de-a lungul geamului, Y spre exterior (geamul în Y ∈ [-g,0]),
@@ -98,5 +100,7 @@ module suport() {
 suport();
 
 // Previzualizare (doar F5)
-%translate([0, y0, -(filtru_H + sub_margine)]) linear_extrude(filtru_H) oval2d(int_L, int_l, r_int);
+// corpul filtrului + capul mai lat care stă pe inel
+%translate([0, y0, -inel_sub_margine - (filtru_H - 40)]) linear_extrude(filtru_H - 40) oval2d(int_L, int_l, r_int);
+%translate([0, y0, -inel_sub_margine]) linear_extrude(40) offset(perete_inel + 2) oval2d(int_L, int_l, r_int);
 %translate([-30, -geam_grosime, -260]) cube([int_L + 60, geam_grosime, 260]);
